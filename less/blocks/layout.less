@@ -2,12 +2,16 @@
   @media (min-width: 320px) { @rules(); }
 }
 
-.tablet(@rules) {
+.tablet768(@rules) {
   @media (min-width: 768px) { @rules(); }
 }
 
+.tablet1000(@rules) {
+  @media (min-width: 1000px) { @rules(); }
+}
+
 .desktop(@rules) {
-  @media (min-width: 1001px) { @rules(); }
+  @media (min-width: 1421px) { @rules(); }
 }
 
 #app {
@@ -15,9 +19,14 @@
     display: flex;
   });
   
-  .tablet ({
+  .tablet768 ({
     padding-top: 23px;
     padding-left: 29px;
+  });
+
+  .tablet1000 ({
+    padding-top: 24px;
+    padding-left: 25px;
   });
 
   .desktop ({
@@ -27,11 +36,7 @@
 }
 
 .main {
-  .phone ({
-    margin: 0 auto;
-  });
-
-  .tablet ({
+  .tablet768 ({
     display: flex;
   });
 }
@@ -42,7 +47,7 @@
     justify-content: center;
   });
 
-  .tablet ({
+  .tablet768 ({
     justify-content: start;
   });
 }
@@ -52,7 +57,7 @@
     display: none;
   });
 
-  .tablet ({
+  .tablet768 ({
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,7 +65,7 @@
 }
 
 .images__slide {
-  .tablet ({
+  .tablet768 ({
     width: 80px;
     height: 115px;
 
@@ -71,14 +76,23 @@
     }
   });
 
+  .tablet1000 ({
+    width: 90px;
+    height: 130px;
+  });
+
   .desktop ({
     width: 90px;
     height: 130px;
   });
 
   &:nth-child(2), &:nth-child(3) {
-    .tablet ({
+    .tablet768 ({
       margin-top: 20px;
+    });
+
+    .tablet1000 ({
+      margin-top: 29px;
     });
 
     .desktop ({
@@ -88,7 +102,7 @@
 }
 
 .images__arrow {
-  .tablet ({
+  .tablet768 ({
     width: 11px;
     height: 7px;
     margin-top: 29px;
@@ -101,6 +115,10 @@
       transition: .7s;
     }
   });
+
+  .tablet1000 ({
+    margin-top: 30px;
+  });
 }
 
 .images__main {
@@ -109,7 +127,7 @@
     height: 351px;
   });
 
-  .tablet ({
+  .tablet768 ({
     margin-left: 10px;
     width: 290px;
     height: 420px;
@@ -121,6 +139,12 @@
     }
   });
 
+  .tablet1000 ({
+    width: 340px;
+    height: 492px;
+    margin-left: 30px;
+  });
+
   .desktop ({
     margin-left: 110px;
     width: 340px;
@@ -129,9 +153,13 @@
 }
 
 .info-block {
-  .tablet ({
+  .tablet768 ({
     margin-top: 0;
     margin-left: 42px;
+  });
+
+  .tablet1000 ({
+    margin-left: 61px;
   });
 
   .desktop ({
@@ -149,10 +177,14 @@
     width: 280px;
   });
 
-  .tablet ({
+  .tablet768 ({
     flex-wrap: wrap;
     margin-left: 0;
     width: 260px;
+  });
+
+  .tablet1000 ({
+    display: none;
   });
 
   .desktop ({
@@ -167,7 +199,7 @@
         margin-left: 10px;
       });
 
-      .tablet ({
+      .tablet768 ({
         margin-left: 15px;
       });
     }
@@ -177,7 +209,7 @@
         display: inline-block;
       });
 
-      .tablet ({
+      .tablet768 ({
         display: none;
       })
     }
@@ -191,7 +223,7 @@
         }
       });
 
-      .tablet ({
+      .tablet768 ({
         display: inline-block;
 
         &::after {
@@ -232,7 +264,7 @@
     display: none;
   });
 
-  .tablet ({
+  .tablet768 ({
     display: inline-block;
     margin-top: 25px;
     font-family: Circe;
@@ -242,6 +274,10 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #131313;
+  });
+
+  .tablet1000 ({
+    margin-top: 56px;
   });
 
   .desktop ({
@@ -259,10 +295,14 @@
     width: 261px;
   });
 
-  .tablet ({
+  .tablet768 ({
     margin-top: 21px;
     margin-left: 0;
     width: 262px;
+  });
+
+  .tablet1000 ({
+    width: 341px;
   });
 
   .desktop ({
@@ -281,7 +321,7 @@
     letter-spacing: 0.01em;  
   });
   
-  .tablet ({
+  .tablet768 ({
     line-height: 30px;
   });
 }
@@ -295,10 +335,15 @@
     width: 218px;
   });
 
-  .tablet ({
+  .tablet768 ({
     margin-top: 24px;
     margin-left: 0;
     width: 211px;
+  });
+
+  .tablet1000 ({
+    margin-top: 55px;
+    width: 340px;
   });
 
   .desktop ({
@@ -342,6 +387,10 @@
     color: #131313;
   });
 
+  .tablet1000 ({
+    margin-left: 35px;
+  });
+
   .desktop ({
     margin-left: 35px;
   });
@@ -367,9 +416,13 @@
     background-color: #f4f4f4;
   });
 
-  .tablet ({
+  .tablet768 ({
     margin-top: 21px;
     width: 289px;
+  });
+
+  .tablet1000 ({
+    width: 339px;
   });
 
   .desktop ({
@@ -392,7 +445,7 @@
       margin-right: 15px;
     });
 
-    .tablet ({
+    .tablet768 ({
       margin-left: 22px;
     });
   }
@@ -404,7 +457,7 @@
       margin-right: 12px;
     });
 
-    .tablet ({
+    .tablet768 ({
       margin-left: 22px;
     });
   }
@@ -423,9 +476,13 @@
     flex-direction: column
   });
 
-  .tablet ({
+  .tablet768 ({
     flex-direction: row;
     margin-top: 29px;
+  });
+
+  .tablet1000 ({
+    margin-top: 50px;
   });
 
   .desktop ({
@@ -438,7 +495,7 @@
     display: none;
   });
 
-  .tablet ({
+  .tablet768 ({
     display: flex;
   });
 }
@@ -449,7 +506,7 @@
     margin-bottom: 36px;
   });
 
-  .tablet ({
+  .tablet768 ({
     display: none;
   })
 }
@@ -500,10 +557,14 @@
     background-color: #006be5;
   });
 
-  .tablet ({
+  .tablet768 ({
     width: 140px;
     margin-top: 0;
     margin-left: 0;
+  });
+
+  .tablet1000 ({
+    width: 165px;
   });
 
   .desktop ({
@@ -546,9 +607,9 @@
     border: 2px solid #d9d9d9;
   });
   
-  .tablet ({
+  .tablet768 ({
     margin-left: 10px;
-    margin-right: 140px;
+    margin-right: 0px;
     width: 135px;
     height: 36px;
 
@@ -557,8 +618,14 @@
     }
   });
 
+  .tablet1000 ({
+    margin-left: 23px;
+    width: 165px;
+  });
+
   .desktop ({
     margin-left: 20px;
+    margin-right: 140px;
     width: 240px;
   });
 }
@@ -576,11 +643,16 @@
     color: #131313;
   });
 
-  .tablet ({
+  .tablet768 ({
     margin-top: 27px;
     margin-left: 0;
     width: 290px;
     font-size: 13px;
+  });
+
+  .tablet1000 ({
+    margin-top: 42px;
+    width: 415px;
   });
 
   .desktop ({
@@ -594,7 +666,7 @@
     display: none;
   });
 
-  .tablet ({
+  .tablet768 ({
     display: flex;
     align-items: center;
     margin-top: 17px;
@@ -606,11 +678,11 @@
 }
 
 .share-block__title {
-  .tablet ({
+  .tablet768 ({
     display: none;
   });
-  
-  .desktop ({
+
+  .tablet1000 ({
     display: block;
     font-family: Circe;
     font-size: 13px;
@@ -620,12 +692,20 @@
     text-transform: uppercase;
     color: #131313;
   });
+  
+  .desktop ({
+    display: block;
+  });
 }
 
 .social-list {
-  .tablet ({
+  .tablet768 ({
     display: flex;
     margin-left: 0;
+  });
+
+  .tablet1000 ({
+    margin-left: 23px;
   });
 
   .desktop ({
@@ -634,7 +714,7 @@
 }
 
 .social-list__item {
-  .tablet ({
+  .tablet768 ({
     margin-left: 10px;
 
     &:first-child {
@@ -644,7 +724,7 @@
 }
 
 .social-list__image {
-  .tablet ({
+  .tablet768 ({
     background-color: #ffffff;
     border: 2px solid #d9d9d9;
     border-radius: 50%;
@@ -658,7 +738,7 @@
 }
 
 .vk {
-  .tablet ({
+  .tablet768 ({
     padding: 10px 11px 10px 12px;
     width: 7px;
     height: 10px;
@@ -666,7 +746,7 @@
 }
 
 .gmail {
-  .tablet ({
+  .tablet768 ({
     padding: 10px 7px 9px 10px;
     width: 13px;
     height: 11px;
@@ -674,7 +754,7 @@
 }
 
 .facebook {
-  .tablet ({
+  .tablet768 ({
     padding: 9px 12px 9px 13px;
     width: 5px;
     height: 12px;
@@ -682,7 +762,7 @@
 }
 
 .twitter {
-  .tablet ({
+  .tablet768 ({
     padding: 10px 9px 10px 10px;
     width: 11px;
     height: 10px;
@@ -690,7 +770,7 @@
 }
 
 .social-list__twits {
-  .tablet ({
+  .tablet768 ({
     margin-left: 1px;
     padding: 3px 10px 3px 16px;
     font-family: Circe;
